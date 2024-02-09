@@ -15,7 +15,7 @@ namespace TaskForce
                 // this will only work if there's a section called ConnectionStrings on the appSettings
                 // var defaultConn = builder.Configuration.GetConnectionString("DefaultConn");
 
-                var defaultConn = builder.Configuration.GetSection("ConnectionString")["DefaultConnection"];
+                var defaultConn = builder.Configuration.GetSection("ConnectionStrings")["DefaultConnection"];
 
                 opts.UseSqlServer(defaultConn);
 
